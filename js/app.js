@@ -8,18 +8,18 @@ const cardNumberFuntion = element => {
     let numberArray = cardNumberValue.map(num => { return Number(num); }).reverse();
 
     numberArray.forEach((num, index) =>{
-      if (index % 2 != 0) { //seleccionar índices pares y multiplicarlos por 2
+      if (index % 2 != 0) {
         let evenNumber = num * 2;
-        if (evenNumber > 9) { //si son mayor a 9 sumar el valor de su índice 0 y 1
+        if (evenNumber > 9) {
             evenNumber = evenNumber.toString();
             let evenNumeZero = Number(evenNumber[0]);
             let evenNumeOne = Number(evenNumber[1]);
-            let sumEvenNumber =  evenNumeZero + evenNumeOne; //Agregarlos a la suma
+            let sumEvenNumber =  evenNumeZero + evenNumeOne;
             sum = sum + sumEvenNumber;
             } else {
                 sum = sum + evenNumber;
                 }
-            } else { //Agregar nones a la suma
+            } else { 
         sum = sum + num;
         }
     });
